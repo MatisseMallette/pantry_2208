@@ -1,19 +1,19 @@
 require './lib/recipe'
 class CookBook
-  attr_reader :recipies
+  attr_reader :recipes
   def initialize 
-    @recipies = []
+    @recipes = []
   end
 
   def add_recipe(recipe)
-    @recipies << recipe
+    @recipes << recipe
   end
 
   def ingredients
-    @recipies.map {|recipe| recipe.ingredients}.flatten.uniq
+    @recipes.map {|recipe| recipe.ingredients}.flatten.uniq
   end
 
   def highest_calorie_meal 
-    @recipies.max {|recipe| recipe.total_calories}
+    @recipes.max {|recipe| recipe.total_calories}
   end
 end

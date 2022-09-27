@@ -31,10 +31,10 @@ RSpec.describe CookBook do
   
   it 'can return array of recipes' do 
 
-    expect(@cook_book.recipies).to eq([])
+    expect(@cook_book.recipes).to eq([])
     @cook_book.add_recipe(@recipe1)
     @cook_book.add_recipe(@recipe2)
-    expect(@cook_book.recipies).to eq([@recipe1, @recipe2])
+    expect(@cook_book.recipes).to eq([@recipe1, @recipe2])
   end
 
   it 'can return an array of each unique ingredient' do 
