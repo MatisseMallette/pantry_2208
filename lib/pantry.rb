@@ -1,4 +1,5 @@
 require './lib/ingredient'
+require './lib/recipe'
 
 class Pantry
   attr_reader :stock 
@@ -12,5 +13,9 @@ class Pantry
 
   def restock(ingredient, amount)
     @stock[ingredient] += amount 
+  end
+
+  def enough_ingredients_for?(recipe)
+    recipe.ingredients_required.none? { |ingredient, amount| @stock[ingredient] < amount }
   end
 end

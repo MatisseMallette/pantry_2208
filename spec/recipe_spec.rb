@@ -23,4 +23,8 @@ RSpec.describe Recipe do
   it 'can return the required ingredients' do 
     expect(@recipe1.ingredients_required).to eq({@ingredient1 => 6, @ingredient2 => 8})
   end
+
+  it 'can return total calories' do 
+    expect(@recipe1.total_calories).to eq(840)
+  end
 end
