@@ -40,7 +40,7 @@ RSpec.describe CookBook do
   it 'can return an array of each unique ingredient' do 
     @cook_book.add_recipe(@recipe1)
     @cook_book.add_recipe(@recipe2)
-    expect(@cook_book.ingredients).to eq([@ingredient1, @ingredient2, @ingredient3, @ingredient4])
+    expect(@cook_book.ingredients).to eq([@ingredient1.name, @ingredient2.name, @ingredient3.name, @ingredient4.name])
   end
 
   it 'can find the highest calorie meal' do 

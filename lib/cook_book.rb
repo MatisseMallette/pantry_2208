@@ -10,7 +10,7 @@ class CookBook
   end
 
   def ingredients
-    @recipes.map {|recipe| recipe.ingredients}.flatten.uniq
+    @recipes.map {|recipe| recipe.ingredients.map {|ingredient| ingredient.name }}.flatten.uniq
   end
 
   def highest_calorie_meal 
